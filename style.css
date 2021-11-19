@@ -1,0 +1,101 @@
+/* GENERAL --- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: red;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+a,
+button,
+input[type='submit'],
+input[type='reset'] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	text-decoration: none;
+}
+
+.header a {
+	font-size: 1.25rem;
+}
+
+.header button {
+	font-size: 0.95rem;
+}
+
+/* HEADER --- */
+
+.header {
+	background-color: orange;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 55px;
+}
+
+.nav {
+	display: flex;
+}
+
+.logo,
+.nav-item,
+.nav-btn {
+	background-color: yellow;
+	padding: 15px 25px;
+}
+
+.hide {
+	display: none;
+}
+
+/* MOBILE HEADER --- */
+
+@media only screen and (max-width: 850px) {
+	.nav-item {
+		display: none;
+	}
+
+	.nav-btn {
+		display: block;
+		z-index: 20;
+	}
+
+	.nav-screen--mob {
+		background-color: green;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 95%;
+		z-index: 10;
+	}
+
+	.nav--mob {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	.nav-item--mob {
+		background-color: blue;
+		padding: 25px 15px;
+	}
+}
+
+@media only screen and (min-width: 850px) {
+	.nav-item--mob {
+		display: none;
+	}
+}
