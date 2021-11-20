@@ -7,7 +7,7 @@
 }
 
 body {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Cutive Mono', monospace;
 }
 
 a,
@@ -31,9 +31,29 @@ input[type='reset'] {
 
 .btn1,
 .btn2 {
-	padding: 15px 35px;
+	padding: 15px 20px;
 	box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
 	border-radius: 0px;
+}
+
+#btn--upwork,
+#btn--linkedin,
+#btn--github {
+	background-size: cover;
+	width: 35px;
+	height: 35px;
+}
+
+#btn--upwork {
+	background-image: url('assets/icon-upwork-rd.png');
+}
+
+#btn--linkedin {
+	background-image: url('assets/icon-linkedin-rd.png');
+}
+
+#btn--github {
+	background-image: url('assets/icon-github-rd.png');
 }
 
 /* FONTS --- */
@@ -78,6 +98,13 @@ body,
 
 .nav--mob--bg {
 	background-color: none;
+}
+
+#btn--upwork,
+#btn--linkedin,
+#btn--github {
+	filter: invert(26%) sepia(33%) saturate(2862%) hue-rotate(154deg)
+		brightness(96%) contrast(98%);
 }
 
 @media only screen and (max-width: 950px) {
@@ -294,6 +321,20 @@ body,
 	.content1,
 	.content2 {
 		width: 100%;
+	}
+
+	.btn-box {
+		margin-top: 20px;
+	}
+
+	.content2 {
+		align-items: center;
+		text-align: center;
+	}
+
+	.photo-me {
+		height: 175px;
+		margin-bottom: 25px;
 	}
 
 	.panel--small {
