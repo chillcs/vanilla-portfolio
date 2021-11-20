@@ -14,16 +14,16 @@
 <body>
 
    <div class="header">
-      <div class="logo-box">
-         <a class="logo" href="#">Curtis Hill</a>
+      <div class="logo-box"">
+         <a class="logo" href="#logo">Curtis Hill • Dev</a>
       </div>
-      <div class="nav nav--mob toggle nav--mob--bg">
-         <a class="nav-item" href="#">About</a>
-         <a class="nav-item" href="#">Education</a>
-         <a class="nav-item" href="#">Projects</a>
-         <a class="nav-item" href="#">Contact</a>
+      <div class="nav nav--mob toggle nav--mob--bg" id="shadow">
+         <a class="nav-item" href="#about">About</a>
+         <a class="nav-item" href="#education">Education</a>
+         <a class="nav-item" href="#projects">Projects</a>
+         <a class="nav-item" href="#contact">Contact</a>
       </div>
-      <button class="nav-btn hide" href="#">☰</button>
+      <button class="nav-btn hide" id="shadow" href="#">☰</button>
    </div>
 
    <div class="main">
@@ -31,25 +31,29 @@
          <div class="bg1"></div>
          <div class="bg2"></div>
       </div>
-      <div class="panel--large">
+      <div class="panel--large" id="frosted">
          <div class="content1">
-            <div class="image"><h1>XXX</h1></div>
+            <div class="image">
+               <img class="photo-me" src="assets/photo-me-sq.jpg" alt="">
+            </div>
             <div class="btn-box">
-               <button>-Button1-</button>
-               <button>-Button2-</button>
+               <button class="btn1" href="#resume">Resume</button>
+               <button class="btn2" href="#contact">Contact</button>
             </div>
             
          </div>
          <div class="content2">
-            <h1>Title</h1>
-            <h2>Subtitle</h2>
-            <p>Some text about some stuff about me and some other things to fill up some space on this page.</p>
-            <div class="social-media">
-               <h2>-XX- -XX- -XX- -XX-</h3>
+            <h1>Curtis Hill</h1>
+            <h2>Freelance Developer</h2>
+            <p>Hi, I'm Curtis, a web developer from Canada. If I'm not out hiking or surfing, I'm usually at my computer building websites and apps.</p>
+            <div class="network-links">
+               <button class="btn--upwork" href="#upwork"></button>
+               <button class="btn--linkedin" href="#linkedin"></button>
+               <button class="btn--github" href="#github"></button>
             </div>
          </div>
       </div>
-      <div class="panel--small">
+      <div class="panel--small" id="frosted">
 
       </div>
       
@@ -57,12 +61,12 @@
 
    <div class="footer">
       <div class="footer-box1">
-         <a class="copyright" href="#">© 2022 Curtis Hill</a>
+         <a class="copyright" href="#copyright">© 1990-2021</a>
       </div>
       <div class="footer-box2">
          <div class="footer-nav">
-            <a class="foot-link" href="#">Privacy</a>
-            <a class="foot-link" href="#">Site Map</a>
+            <a class="foot-link" href="#privacy">Privacy</a>
+            <a class="foot-link" href="#site-map">Site Map</a>
             
          </div>
       </div>
