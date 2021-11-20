@@ -1,14 +1,15 @@
 // Open Mobile Menu ---
 window.onload = function () {
 	var navBtn = document.querySelector('.nav-btn');
-	var navScreenMob = document.querySelector('.nav-screen--mob');
-	navBtn.addEventListener('click', openNavScreenMob);
-	function openNavScreenMob() {
-		if (navScreenMob.classList.contains('hide')) {
-			navScreenMob.classList.remove('hide');
+	var navMob = document.querySelector('.nav--mob');
+	var toggle = document.querySelector('.toggle');
+	navBtn.addEventListener('click', toggleNav);
+	function toggleNav() {
+		if (navMob.classList.contains('toggle')) {
+			navMob.classList.remove('toggle');
 			navBtn.style.transform = 'rotate(-45deg)';
 		} else {
-			navScreenMob.classList.add('hide');
+			navMob.classList.add('toggle');
 			navBtn.style.transform = 'rotate(180deg)';
 		}
 	}
