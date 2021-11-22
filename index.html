@@ -8,21 +8,13 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-   <script src="head.js" type="text/javascript" defer></script>
+   <script type="module" src="index.js"></script>
+   <script type="text/javascript" src="logic.js" defer></script>
    <title>Curtis Hill</title>
 </head>
 <body>
 
-   <div class="head">
-      <a class="logo-btn" href="index.html">Curtis Hill • Dev</a>
-      <div class="nav nav--mobile shadow">
-         <button data-tab-target="#tab1" class="nav-item">About</button>
-         <button data-tab-target="#tab2" class="nav-item">Education</button>
-         <button data-tab-target="#tab3" class="nav-item">Projects</button>
-         <button data-tab-target="#tab4" class="nav-item">Contact</button>
-      </div>
-      <button class="nav-btn nav-btn--hide shadow">☰</button>
-   </div>
+   <header-template></header-template>
 
    <div class="main">
       
@@ -91,17 +83,7 @@
       
    </div>
 
-   <div class="footer">
-      <div class="footer-box1">
-         <a class="copyright" href="index.html">© 1990-2021</a>
-      </div>
-      <div class="footer-box2">
-         <div class="footer-nav">
-            <a class="footer-item" href="privacy-policy.html">Privacy</a>
-            <a class="footer-item" href="site-map.html">Site Map</a>       
-         </div>
-      </div>
-   </div>
+   <footer-template></footer-template>
 
 </body>
 </html>

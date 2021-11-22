@@ -44,8 +44,8 @@ body {
 	font-family: 'Abel', sans-serif;
 }
 
-.head a,
-.head button {
+.header a,
+.header button {
 	font-size: 1.25rem;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 body,
-.head,
+.header,
 .footer,
 .bg1,
 .btn1,
@@ -129,7 +129,7 @@ body,
 
 /* HEADER --- */
 
-.head {
+.header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -162,7 +162,7 @@ body,
 /* MOBILE HEADER --- */
 
 @media only screen and (max-width: 975px) {
-	.head {
+	.header {
 		padding: 15px 0px;
 		margin: 0 5%;
 	}
