@@ -1,16 +1,21 @@
-// Open Mobile Menu ---
-window.onload = function () {
-	var navBtn = document.querySelector('.nav-btn');
-	var navMob = document.querySelector('.nav--mob');
-	var toggle = document.querySelector('.toggle');
-	navBtn.addEventListener('click', toggleNav);
-	function toggleNav() {
-		if (navMob.classList.contains('toggle')) {
-			navMob.classList.remove('toggle');
-			navBtn.style.transform = 'rotate(-45deg)';
-		} else {
-			navMob.classList.add('toggle');
-			navBtn.style.transform = 'rotate(180deg)';
-		}
-	}
-};
+//
+// Page Navigation ---
+const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content]');
+tabs.forEach((tab) => {
+	tab.addEventListener('click', () => {
+		const target = document.querySelector(tab.dataset.tabTarget);
+		tabContents.forEach((tabContent) => {
+			tabContent.classList.remove('tab--active');
+		});
+		target.classList.add('tab--active');
+	});
+});
+//
+// Toggle Mobile Menu ---
+var navBtn = document.querySelector('.nav-btn');
+var nav = document.querySelector('.nav');
+
+navBtn.addEventListener('click', () => {
+	nav.classList.toggle('nav--mobile');
+});

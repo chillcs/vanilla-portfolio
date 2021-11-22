@@ -8,51 +8,84 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-   <script src="head.js" type="text/javascript"></script>
-   <title>Document</title>
+   <script src="head.js" type="text/javascript" defer></script>
+   <title>Curtis Hill</title>
 </head>
 <body>
 
-   <div class="header">
-      <div class="logo-box"">
-         <a class="logo" href="#home">Curtis Hill • Dev</a>
+   <div class="head">
+      <a class="logo-btn" href="index.html">Curtis Hill • Dev</a>
+      <div class="nav nav--mobile shadow">
+         <button data-tab-target="#tab1" class="nav-item">About</button>
+         <button data-tab-target="#tab2" class="nav-item">Education</button>
+         <button data-tab-target="#tab3" class="nav-item">Projects</button>
+         <button data-tab-target="#tab4" class="nav-item">Contact</button>
       </div>
-      <div class="nav nav--mob toggle nav--mob--bg" id="shadow">
-         <a class="nav-item" href="#about">About</a>
-         <a class="nav-item" href="#education">Education</a>
-         <a class="nav-item" href="#projects">Projects</a>
-         <a class="nav-item" href="#contact">Contact</a>
-      </div>
-      <button class="nav-btn hide" id="shadow" href="#">☰</button>
+      <button class="nav-btn nav-btn--hide shadow">☰</button>
    </div>
 
    <div class="main">
+      
       <div class="bg-box">
          <div class="bg1"></div>
          <div class="bg2"></div>
       </div>
-      <div class="panel--large" id="frosted">
-         <div class="content1">
-            <div class="image">
-               <img class="photo-me" src="assets/photo-me-sq.jpg" alt="">
+      
+      <div data-tab-content id="tab0" class="tab--active">
+         <div class="tab-content-box frosted">
+            <div class="content1">
+               <img class="photo-me" src="assets/photo-me.jpg">
             </div>
-         </div>
-         <div class="content2">
-            <h1>Curtis Hill</h1>
-            <h2>Freelance Developer</h2>
-            <p>Hello! I'm Curtis, a freelance web developer from Victoria, Canada. When I'm not out hiking or surfing, you can usually find me at a coffee shop building websites and apps.</p>
-            <div class="btn-box">
-               <button class="btn1" href="#contact">Contact</button>
-               <button class="btn2" href="#resume">Resume</button>
+            <div class="content2">
+               <h1>Curtis Hill</h1>
+               <h2>Freelance Developer</h2>
+               <p>Hello! I'm Curtis, a freelance web developer from Victoria, Canada. When I'm not out hiking or surfing, you can usually find me at a coffee shop building websites and apps.</p>
+               <div class="btn-box">
+                  <button class="btn1">Contact</button>
+                  <button class="btn2">Resume</button>
+               </div>
             </div>
          </div>
       </div>
-      <div class="panel--small" id="frosted">
-         <div class="network-links">
-            <button id="btn--upwork" href="#upwork"></button>
-            <button id="btn--linkedin" href="#linkedin"></button>
-            <button id="btn--github" href="#github"></button>
-            <button id="btn--codepen" href="#codepen"></button>
+
+      <div data-tab-content id="tab1" class="">
+         <div class="tab-content-box frosted">
+            <h2>ABOUT</h2>
+         </div>
+      </div>
+
+      <div data-tab-content id="tab2" class="">
+         <div class="tab-content-box frosted">
+            <h2>EDUCATION</h2>
+         </div>
+      </div>
+
+      <div data-tab-content id="tab3" class="">
+         <div class="tab-content-box frosted">
+            <h2>PROJECTS</h2>
+         </div>
+      </div>
+
+      <div data-tab-content id="tab4" class="">
+         <div class="tab-content-box frosted">
+            <h2>CONTACT</h2>
+         </div>
+      </div>
+
+      <div class="side-content-box frosted">
+         <div class="social-btns">
+            <a href="#" target="_blank">
+               <img class="social-btn" src="assets/icon-upwork.png" alt="">
+            </a>
+            <a href="#" target="_blank">
+               <img class="social-btn" src="assets/icon-linkedin.png" alt="">
+            </a>
+            <a href="#" target="_blank">
+               <img class="social-btn" src="assets/icon-github.png" alt="">
+            </a>
+            <a href="#" target="_blank">
+               <img class="social-btn" src="assets/icon-codepen.png" alt="">
+            </a>
          </div>
       </div>
       
@@ -60,13 +93,12 @@
 
    <div class="footer">
       <div class="footer-box1">
-         <a class="copyright" href="#home">© 1990-2021</a>
+         <a class="copyright" href="index.html">© 1990-2021</a>
       </div>
       <div class="footer-box2">
          <div class="footer-nav">
-            <a class="foot-link" href="#privacy">Privacy</a>
-            <a class="foot-link" href="#site-map">Site Map</a>
-            
+            <a class="footer-item" href="privacy-policy.html">Privacy</a>
+            <a class="footer-item" href="site-map.html">Site Map</a>       
          </div>
       </div>
    </div>
