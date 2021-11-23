@@ -4,7 +4,7 @@ class headerTemplate extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
 			<div id="header" class="header">
-				<a class="logo-btn" href="index.html">Curtis Hill • Dev</a>
+				<a class="logo-btn" href="index.html"><flash-icon class="flash">•</flash-icon>Curtis Hill</a>
 				<div class="nav nav--mobile shadow">
 					<button data-tab-target="#tab1" class="nav-item">About</button>
 					<button data-tab-target="#tab2" class="nav-item">Education</button>

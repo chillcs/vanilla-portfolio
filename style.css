@@ -8,14 +8,6 @@
 	display: block;
 }
 
-[data-foot-content] {
-	display: none;
-}
-
-.foot--active[data-foot-content] {
-	display: block;
-}
-
 /* GENERAL SETTINGS --- */
 
 * {
@@ -38,15 +30,7 @@ input[type='reset'] {
 	outline: inherit;
 }
 
-@media only screen and (max-width: 975px) {
-	.btn1,
-	.btn2 {
-		margin-right: 0px;
-		padding: 15px 50px;
-	}
-}
-
-/* FONTS --- */
+/* FONTS & SIZES --- */
 
 body {
 	font-family: 'Abel', sans-serif;
@@ -55,6 +39,11 @@ body {
 .header a,
 .header button {
 	font-size: 1.25rem;
+}
+
+flash-icon {
+	font-size: 1.2rem;
+	padding-right: 10px;
 }
 
 h1 {
@@ -87,15 +76,38 @@ body,
 	background-color: #f0f5f6;
 }
 
-.nav {
-	background-color: #00e599;
-	color: #fff;
+flash-icon {
+	color: #00e599;
 }
 
+.nav,
 .btn1,
 .btn2 {
 	background-color: #00e599;
 	color: #fff;
+}
+
+.nav-item:hover,
+.btn1:hover,
+.btn2:hover {
+	background-color: #000033;
+}
+
+.logo-btn:hover,
+.copyright:hover,
+.footer-item:hover {
+	color: #00e599;
+}
+
+@media only screen and (max-width: 975px) {
+	.nav {
+		background-color: #000033;
+		opacity: 98%;
+	}
+
+	.nav-item:hover {
+		background-color: #00e599;
+	}
 }
 
 /* Color converter for .png images https://codepen.io/sosuke/pen/Pjoqqp */
@@ -109,24 +121,15 @@ body,
 		brightness(99%) contrast(101%);
 }
 
-@media only screen and (max-width: 975px) {
-	.nav {
-		background-color: #000033;
-		opacity: 98%;
-	}
-}
-
 /* EFFECTS --- */
 
-.nav-item:hover,
-.btn1:hover,
-.btn2:hover {
-	background-color: #000033;
+.flash {
+	animation: flash 1s linear infinite;
 }
 
-@media only screen and (max-width: 975px) {
-	.nav-item:hover {
-		background-color: #00e599;
+@keyframes flash {
+	50% {
+		opacity: 0;
 	}
 }
 
@@ -168,9 +171,8 @@ body,
 	margin: 0 10%;
 }
 
-.logo-btn {
-	padding: 20px 0;
-	padding-right: 25px;
+.flash-icon {
+	display: inline-block;
 }
 
 .nav {
@@ -264,6 +266,11 @@ body,
 	display: flex;
 }
 
+.tab {
+	overflow-y: auto;
+	padding: 25px 15px;
+}
+
 .content1 {
 	width: 50%;
 	height: 100%;
@@ -329,19 +336,6 @@ body,
 	margin: 15px;
 }
 
-/* MAIN --- PAGE TEMPLATE */
-
-.tab {
-	overflow-y: auto;
-	padding: 25px 15px;
-}
-
-@media only screen and (max-width: 975px) {
-	.tab {
-		padding: 15px 10px;
-	}
-}
-
 /* MOBILE MAIN --- */
 
 @media only screen and (max-width: 975px) {
@@ -367,6 +361,10 @@ body,
 		width: 90%;
 	}
 
+	.tab {
+		padding: 15px 10px;
+	}
+
 	.content1,
 	.content2 {
 		width: 100%;
@@ -386,6 +384,12 @@ body,
 	.photo-me {
 		height: 175px;
 		margin-bottom: 25px;
+	}
+
+	.btn1,
+	.btn2 {
+		margin-right: 0px;
+		padding: 15px 50px;
 	}
 
 	.side-content-box {
