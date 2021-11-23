@@ -8,6 +8,14 @@
 	display: block;
 }
 
+[data-foot-content] {
+	display: none;
+}
+
+.foot--active[data-foot-content] {
+	display: block;
+}
+
 /* GENERAL SETTINGS --- */
 
 * {
@@ -64,39 +72,62 @@ h2 {
 /* COLORS --- */
 
 body {
-	color: #026670;
+	color: #000033;
 }
 
 body,
 .header,
 .footer,
 .bg1,
-.btn1,
-.btn2 {
-	background-color: #fef9c7;
+.nav-btn {
+	background-color: #f4f9fa;
 }
 
 .bg2 {
-	background-color: #fce181;
+	background-color: #f0f5f6;
+}
+
+.nav {
+	background-color: #00e599;
+	color: #fff;
+}
+
+.btn1,
+.btn2 {
+	background-color: #00e599;
+	color: #fff;
 }
 
 /* Color converter for .png images https://codepen.io/sosuke/pen/Pjoqqp */
 .social-btn {
-	filter: invert(18%) sepia(92%) saturate(2499%) hue-rotate(169deg)
-		brightness(92%) contrast(98%);
+	filter: invert(7%) sepia(25%) saturate(7274%) hue-rotate(232deg)
+		brightness(87%) contrast(120%);
+}
+
+.social-btn:hover {
+	filter: invert(82%) sepia(36%) saturate(6310%) hue-rotate(110deg)
+		brightness(99%) contrast(101%);
 }
 
 @media only screen and (max-width: 975px) {
 	.nav {
-		background-color: #fef9c7;
+		background-color: #000033;
 		opacity: 98%;
 	}
 }
 
 /* EFFECTS --- */
 
-.nav-item:hover {
-	background-color: #f2f2f2;
+.nav-item:hover,
+.btn1:hover,
+.btn2:hover {
+	background-color: #000033;
+}
+
+@media only screen and (max-width: 975px) {
+	.nav-item:hover {
+		background-color: #00e599;
+	}
 }
 
 .shadow {
@@ -146,6 +177,7 @@ body,
 	display: flex;
 }
 
+.logo-btn,
 .nav-item,
 .nav-btn {
 	padding: 20px 25px;
@@ -165,6 +197,10 @@ body,
 	.header {
 		padding: 15px 0px;
 		margin: 0 5%;
+	}
+
+	.logo-btn {
+		padding: 5px 10px;
 	}
 
 	.nav-btn {
@@ -290,6 +326,20 @@ body,
 	background-size: cover;
 	width: 35px;
 	height: 35px;
+	margin: 15px;
+}
+
+/* MAIN --- PAGE TEMPLATE */
+
+.tab {
+	overflow-y: auto;
+	padding: 25px 15px;
+}
+
+@media only screen and (max-width: 975px) {
+	.tab {
+		padding: 15px 10px;
+	}
 }
 
 /* MOBILE MAIN --- */
@@ -362,11 +412,9 @@ body,
 	margin: 0 10%;
 }
 
-.copyright {
-	padding: 15px 0px;
-}
+.copyright,
 .footer-item {
-	padding: 15px 0px 15px 25px;
+	padding: 15px 25px;
 }
 
 @media only screen and (max-width: 975px) {

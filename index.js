@@ -3,7 +3,7 @@
 class headerTemplate extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
-			<div class="header">
+			<div id="header" class="header">
 				<a class="logo-btn" href="index.html">Curtis Hill • Dev</a>
 				<div class="nav nav--mobile shadow">
 					<button data-tab-target="#tab1" class="nav-item">About</button>
@@ -28,8 +28,8 @@ class footerTemplate extends HTMLElement {
 				</div>
 				<div class="footer-box2">
 					<div class="footer-nav">
-						<a class="footer-item" href="privacy-policy.html">Privacy</a>
-						<a class="footer-item" href="site-map.html">Site Map</a>       
+						<button data-tab-target="#tab5" class="footer-item">Privacy</button>
+						<button data-tab-target="#tab6" class="footer-item">Site Map</button>
 					</div>
 				</div>
 			</div>
