@@ -318,6 +318,7 @@ flash-icon {
 	height: 88%;
 	right: 10%;
 	width: 10%;
+	padding: 25px 10px;
 	z-index: 5;
 }
 
