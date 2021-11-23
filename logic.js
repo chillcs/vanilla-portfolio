@@ -4,6 +4,7 @@ const tabs = document.querySelectorAll('[data-tab-target]');
 const tabContents = document.querySelectorAll('[data-tab-content]');
 const nav = document.querySelector('.nav');
 const navBtn = document.querySelector('.nav-btn');
+const footer = document.querySelector('.footer');
 //
 // Page Navigation ---
 tabs.forEach((tab) => {
@@ -20,4 +21,5 @@ tabs.forEach((tab) => {
 // Toggle Mobile Menu ---
 navBtn.addEventListener('click', () => {
 	nav.classList.toggle('nav--mobile');
+	footer.classList.toggle('footer--hide');
 });
