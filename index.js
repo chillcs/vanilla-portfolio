@@ -4,7 +4,7 @@ class headerTemplate extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
 			<div id="header" class="header">
-				<a class="logo" href="index.html"><flash-icon class="flash">•</flash-icon>Curtis Hill</a>
+				<a class="logo" href="https://dev.cstudio.ca"><flash-icon class="flash">•</flash-icon>Curtis Hill</a>
 				<div class="nav nav--mobile shadow">
 					<a data-tab-target="#tab1" class="nav-item">About</a>
 					<a data-tab-target="#tab2" class="nav-item">Education</a>
@@ -24,7 +24,7 @@ class footerTemplate extends HTMLElement {
 		this.innerHTML = `
 			<div class="footer">
 				<div class="footer-box1">
-					<a class="copyright" href="index.html">© 1990-2021</a>
+					<a class="copyright" href="https://dev.cstudio.ca">© 1990-2021</a>
 				</div>
 				<div class="footer-box2">
 					<div class="footer-nav">
