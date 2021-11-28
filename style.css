@@ -24,11 +24,10 @@ input[type='reset'] {
 	text-decoration: none;
 	color: inherit;
 	border: none;
-	padding: 0;
 	font: inherit;
-	cursor: pointer;
 	outline: inherit;
 	user-select: none;
+	cursor: pointer;
 }
 
 :root {
@@ -79,10 +78,19 @@ flash-icon {
 
 h1 {
 	font-size: 3rem;
+	line-height: 4rem;
 }
 
 h2 {
 	font-size: 2rem;
+	line-height: 2.75rem;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.2rem;
+	margin: 10px 0;
+	margin-bottom: 35px;
 }
 
 .footer a {
@@ -245,50 +253,26 @@ h2 {
 
 .bg1 {
 	background-color: var(--color3);
-	width: 28%;
-	height: 80vh;
+	width: 30%;
+	min-height: 80vh;
 	z-index: -5;
 }
 
 .bg2 {
 	background-color: var(--color4);
 	width: 75%;
-	height: 80vh;
+	min-height: 80vh;
 	z-index: -5;
 }
 
 .tab-content-box {
 	position: absolute;
 	top: 3%;
-	height: 94%;
+	min-height: 94%;
 	left: 10%;
-	width: 68%;
+	width: 80%;
 	z-index: 5;
 	display: flex;
-}
-
-.side-content-box {
-	position: absolute;
-	top: 3%;
-	height: 94%;
-	right: 10%;
-	width: 8%;
-	z-index: 5;
-}
-
-.social-btns {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
-	height: 100%;
-}
-
-.social-btn {
-	background-size: cover;
-	width: 35px;
-	height: 35px;
-	margin: 10px;
 }
 
 /* MOBILE MAIN --- */
@@ -305,46 +289,26 @@ h2 {
 
 	.bg2 {
 		width: 100%;
-		height: 74vh;
+		min-height: 74vh;
 	}
 
 	.tab-content-box {
 		flex-direction: column;
 		top: 0.5%;
-		height: 82%;
+		min-height: 82%;
 		left: 5%;
 		width: 90%;
-	}
-
-	.side-content-box {
-		top: 85%;
-		height: 10%;
-		left: 5%;
-		width: 90%;
-		padding: 0px;
-	}
-
-	.social-btns {
-		flex-direction: row;
-		width: 100%;
-	}
-
-	.social-btn {
-		margin: 0;
-		margin-top: 3px;
 	}
 }
 
 /* TAB 0 (HOME PAGE) --- */
 
-.content1 {
+.home1 {
 	width: 50%;
-	height: 100%;
+	min-height: 100%;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
-	padding: 20px;
 }
 
 .photo-me {
@@ -356,25 +320,22 @@ h2 {
 	padding: 15px;
 }
 
-.content2 {
+.home2 {
 	width: 50%;
-	height: 100%;
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: left;
-	padding: 75px 0px;
-	padding-right: 8.5%;
+	padding-right: 15%;
 }
 
-.content2 h2 {
-	padding-bottom: 3px;
+.home-content-box {
+	margin-top: 35px;
 }
 
-.btn-box {
-	display: flex;
-	justify-content: flex-start;
-	width: 100%;
+.home-btn-box {
+	margin: 0;
 }
 
 .btn-icon {
@@ -385,7 +346,6 @@ h2 {
 .btn {
 	background-color: var(--color1);
 	color: var(--color5);
-	margin-right: 15px;
 	padding: 15px 25px;
 	padding-right: 35px;
 	box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
@@ -396,10 +356,21 @@ h2 {
 	background-color: var(--color2);
 }
 
+.social-btn-box {
+	margin: 30px 0;
+}
+
+.social-btn {
+	background-size: cover;
+	width: 35px;
+	height: 35px;
+	margin-right: 10px;
+}
+
 /* MOBILE TAB 0 (HOME PAGE) --- */
 
 @media only screen and (max-width: 1050px) {
-	.content1 {
+	.home1 {
 		width: 100%;
 		height: 35%;
 	}
@@ -413,17 +384,12 @@ h2 {
 		z-index: -5;
 	}
 
-	.content2 {
+	.home2 {
 		width: 100%;
 		height: 65%;
 		align-items: center;
 		text-align: center;
 		padding: 20px 15px;
-	}
-
-	.btn-box {
-		margin-top: 20px;
-		justify-content: space-evenly;
 	}
 
 	.btn1,
@@ -435,7 +401,7 @@ h2 {
 }
 
 @media only screen and (max-width: 1050px) and (min-width: 475px) {
-	.content2 {
+	.home2 {
 		padding: 20px 12%;
 	}
 }
@@ -487,16 +453,6 @@ h2 {
 	padding-right: 5px;
 }
 
-.tab3 .heading-box,
-.tab3 .image-box,
-.tab3 p {
-	margin-bottom: 15px;
-}
-
-.btn {
-	margin-right: 5px;
-}
-
 /* MOBILE TAB 3 (PROJECTS) --- */
 
 @media only screen and (max-width: 1050px) {
@@ -534,17 +490,13 @@ h2 {
 		font-size: 0.8rem;
 	}
 
-	.tab3 p {
-		margin-bottom: 0;
-	}
-
 	.prev-btn,
 	.next-btn {
 		margin: 0;
 		padding: 10px 8px 8px 12px;
 	}
 
-	.btn-box {
+	.home-btn-box {
 		width: 100%;
 	}
 	.p-btn1,
@@ -565,7 +517,6 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 8vh;
 	padding: 20px 0px;
 	margin: 0 10%;
 }
@@ -582,10 +533,6 @@ h2 {
 
 @media only screen and (max-width: 1050px) {
 	.footer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		height: 8vh;
 		padding: 15px 0px;
 		margin: 0 5%;
 	}
@@ -603,11 +550,11 @@ h2 {
 /* MISC SCREEN ADJUSTMENTS --- */
 
 @media only screen and (max-width: 1050px) and (max-height: 550px) {
-	.content1 {
+	.home1 {
 		display: none;
 	}
 
-	.content2 {
+	.home2 {
 		height: 100%;
 	}
 
