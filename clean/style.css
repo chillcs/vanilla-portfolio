@@ -1,0 +1,311 @@
+/* GENERAL SETTINGS --- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a,
+button,
+input[type='submit'],
+input[type='reset'] {
+	background: none;
+	text-decoration: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	outline: inherit;
+	user-select: none;
+	cursor: pointer;
+}
+
+[data-tab-content] {
+	display: none;
+}
+
+.tab--active[data-tab-content] {
+	display: block;
+}
+
+/* EFFECTS --- */
+
+.blink {
+	animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+.shadow {
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+	border-radius: 0px;
+	overflow: hidden;
+}
+
+.frosted {
+	position: relative;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+	border-radius: 0px;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+}
+
+.frosted:before {
+	content: '';
+	position: absolute;
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+	filter: blur(10px);
+	margin: -20px;
+}
+
+/* FONTS, SIZES, & COLORS --- */
+
+/* Color converter for .png images https://codepen.io/sosuke/pen/Pjoqqp */
+
+.btn-icon {
+	/* White */
+	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(25deg) brightness(100%)
+		contrast(100%);
+}
+
+.media-btn {
+	/* Color 2 */
+	filter: invert(7%) sepia(25%) saturate(7274%) hue-rotate(232deg)
+		brightness(87%) contrast(120%);
+}
+
+.media-btn:hover {
+	/* Color 1 */
+	filter: invert(82%) sepia(36%) saturate(6310%) hue-rotate(110deg)
+		brightness(99%) contrast(101%);
+}
+
+:root {
+	--color1: #00e599;
+	--color2: #000033;
+	--color3: #f4f9fa;
+	--color4: #f0f5f6;
+	--color5: #fff;
+}
+
+body {
+	background-color: var(--color3);
+	color: var(--color2);
+	font-family: 'Abel', sans-serif;
+}
+
+.header a,
+.header button {
+	font-size: 1.25rem;
+}
+
+.blink {
+	font-size: 1.2rem;
+	padding-right: 8px;
+}
+
+h1 {
+	font-size: 3rem;
+	line-height: 4rem;
+	margin-top: 15px;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.25rem;
+	margin: 10px 2px;
+}
+
+.footer a {
+	font-size: 0.85rem;
+}
+
+/* BUTTON SIZES & STYLES --- */
+
+.btn {
+	font-size: 1rem;
+	background-color: var(--color1);
+	color: var(--color5);
+	padding: 15px 25px;
+	padding-right: 35px;
+	margin-right: 10px;
+	box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
+	border-radius: 0px;
+}
+
+.btn:hover {
+	background-color: var(--color2);
+}
+
+.btn-icon {
+	width: 1.25rem;
+	padding-right: 5px;
+}
+
+.media-btn {
+	background-size: cover;
+	width: 35px;
+	height: 35px;
+	margin: 5px;
+}
+
+/* HEADER & FOOTER --- */
+
+.header,
+.footer {
+	background-color: var(--color3);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10%;
+	height: 75px;
+}
+
+.nav {
+	color: var(--color2);
+	display: flex;
+	text-align: center;
+}
+
+.footer-nav {
+	display: flex;
+}
+
+.blink {
+	color: var(--color1);
+}
+
+.logo,
+.nav-item,
+.nav-btn,
+.copyright,
+.footer-item {
+	padding: 10px 25px;
+}
+
+.logo:hover,
+.nav-item:hover,
+.copyright:hover,
+.footer-item:hover {
+	color: var(--color1);
+}
+
+.nav-btn {
+	background-color: var(--color3);
+	transform: rotate(-180deg);
+}
+
+.nav-btn--hide {
+	display: none;
+}
+
+/* BACKGROUND, TAB, & PAGE SETTINGS --- */
+
+.bg-box {
+	position: absolute;
+	width: 100%;
+	height: calc(100vh - 150px);
+	z-index: -5;
+	display: flex;
+}
+
+.bg1 {
+	background-color: var(--color3);
+	width: calc(50% - 175px - 30px);
+	height: 100%;
+}
+
+.bg2 {
+	background-color: var(--color4);
+	width: calc(100% - (50% - 175px - 30px));
+	height: 100%;
+}
+
+.tab {
+	width: 80%;
+	height: calc(100vh - 150px - 30px);
+	min-height: 500px;
+	margin: 15px auto;
+}
+
+.page {
+	display: flex;
+	height: 100%;
+}
+
+.page-title {
+	width: calc(50% - 175px - 30px);
+	text-align: right;
+	padding: 25px;
+}
+
+.page-content {
+	width: calc(100% - (50% - 175px - 30px));
+	padding: 25px;
+}
+
+/* TAB 0 (HOME) --- */
+
+.home {
+	width: 50%;
+	padding: 30px;
+}
+
+.home1 {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.photo-me {
+	width: 350px;
+	border-radius: 50%;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+	padding: 15px;
+}
+
+.home2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.welcome-text {
+	max-width: 400px;
+}
+
+.home-btns {
+	display: flex;
+	padding: 5px 0;
+}
+
+.media-btns {
+	display: flex;
+	padding: 5px 0;
+}
+
+/* TAB 1 (PROJECT) --- */
+
+/* TAB 2 (EDUCATION) --- */
+
+/* TAB 3 (CONTACT) --- */
+
+/* TAB 4 (PRIVACY POLICY) --- */
+
+/* TAB 5 (SITE MAP) --- */
