@@ -118,18 +118,25 @@ body {
 h1 {
 	font-size: 3rem;
 	line-height: 4rem;
-	margin-top: 15px;
+	margin: 5px 0;
 }
 
 h2 {
 	font-size: 2rem;
 	line-height: 2.5rem;
+	margin: 5px 0;
+}
+
+h3 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 5px 0;
 }
 
 p {
 	font-size: 1rem;
 	line-height: 1.25rem;
-	margin: 10px 2px;
+	margin: 10px 0;
 }
 
 .footer a {
@@ -163,6 +170,10 @@ p {
 	width: 35px;
 	height: 35px;
 	margin: 5px;
+}
+
+.p-btn {
+	padding: 18px 15px 15px 20px;
 }
 
 /* HEADER & FOOTER --- */
@@ -258,6 +269,7 @@ p {
 .page-content {
 	width: calc(100% - (50% - 175px - 30px));
 	padding: 25px;
+	overflow-y: auto;
 }
 
 /* TAB 0 (HOME) --- */
@@ -286,7 +298,7 @@ p {
 	justify-content: center;
 }
 
-.welcome-text {
+.home p {
 	max-width: 400px;
 }
 
@@ -301,6 +313,37 @@ p {
 }
 
 /* TAB 1 (PROJECT) --- */
+
+.project-controls {
+	position: absolute;
+	top: 25px;
+	right: 15px;
+	display: flex;
+}
+
+.project {
+	display: none;
+}
+
+.project--active {
+	display: block;
+}
+
+.project-images {
+	width: 100%;
+	overflow: scroll;
+	display: flex;
+	margin: 10px 0;
+}
+
+.project-image {
+	width: 45%;
+	padding-right: 10px;
+}
+
+.project-btns {
+	display: flex;
+}
 
 /* TAB 2 (EDUCATION) --- */
 

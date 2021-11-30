@@ -6,8 +6,8 @@ const nav = document.querySelector('.nav');
 const navBtn = document.querySelector('.nav-btn');
 const footer = document.querySelector('.footer');
 const projects = document.querySelectorAll('.project');
-const nextBtn = document.querySelector('.next-btn');
-const prevBtn = document.querySelector('.prev-btn');
+const backBtn = document.querySelector('.p-btn-back');
+const nextBtn = document.querySelector('.p-btn-next');
 //
 // Page Navigation ---
 tabs.forEach((tab) => {
@@ -28,8 +28,17 @@ navBtn.addEventListener('click', () => {
 	footer.classList.toggle('footer--hide');
 });
 //
-// Project Next/Prev Buttons ---
+// Project Back/Next Buttons ---
 var projectCount = 0;
+backBtn.addEventListener('click', () => {
+	projectCount--;
+	if (projectCount >= 0) {
+		projects[projectCount + 1].classList.remove('project--active');
+		projects[projectCount].classList.add('project--active');
+	} else if (projectCount < 0) {
+		projectCount++;
+	}
+});
 nextBtn.addEventListener('click', () => {
 	projectCount++;
 	if (projectCount < projects.length) {
@@ -37,14 +46,5 @@ nextBtn.addEventListener('click', () => {
 		projects[projectCount].classList.add('project--active');
 	} else if (projectCount === projects.length) {
 		projectCount--;
-	}
-});
-prevBtn.addEventListener('click', () => {
-	projectCount--;
-	if (projectCount >= 0) {
-		projects[projectCount + 1].classList.remove('project--active');
-		projects[projectCount].classList.add('project--active');
-	} else if (projectCount < 0) {
-		projectCount++;
 	}
 });
