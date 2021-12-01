@@ -97,12 +97,13 @@ input[type='reset'] {
 	--color3: #f4f9fa;
 	--color4: #f0f5f6;
 	--color5: #fff;
+	--font: 'Abel', sans-serif;
 }
 
 body {
 	background-color: var(--color3);
 	color: var(--color2);
-	font-family: 'Abel', sans-serif;
+	font-family: var(--font);
 }
 
 .header a,
@@ -174,6 +175,12 @@ p {
 
 .p-btn {
 	padding: 18px 15px 15px 20px;
+}
+
+input[type='submit'] {
+	width: 150px;
+	background-color: var(--color1);
+	color: var(--color5);
 }
 
 /* HEADER & FOOTER --- */
@@ -347,7 +354,50 @@ p {
 
 /* TAB 2 (EDUCATION) --- */
 
+.education-item {
+	padding: 5px 0;
+	margin-bottom: 15px;
+	border-bottom: 5px solid var(--color2);
+}
+
 /* TAB 3 (CONTACT) --- */
+
+.contact-form {
+	background-color: var(--color5);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 0 auto;
+	padding: 25px;
+}
+
+.contact-form--50-wide {
+	display: flex;
+}
+
+.contact-form--100-wide {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-form #name,
+.contact-form #company,
+.contact-form #email,
+.contact-form #subject,
+.contact-form #message {
+	border: none;
+	border-bottom: 2px solid var(--color2);
+	background-color: var(--color3);
+	font-family: var(--font);
+	font-size: 1rem;
+	width: 100%;
+	padding: 15px 5px;
+	margin: 25px 0px;
+}
+
+.contact-form #name {
+	margin-right: 15px;
+}
 
 /* TAB 4 (PRIVACY POLICY) --- */
 
