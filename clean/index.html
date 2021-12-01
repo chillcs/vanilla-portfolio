@@ -39,7 +39,7 @@
             <p>Hi, I'm Curtis, a freelance web developer from Victoria, British Columbia, Canada. When I'm not out hiking or surfing, I'm usually at a coffee shop building websites and apps.</p>
             <div class="home-btns">
                <a class="btn" href="https://drive.google.com/file/d/1YgDVmSG0CFEjsdX9ACJe2qliXj_xtbtm/view?usp=sharing" target="_blank"><img class="btn-icon" src="/assets/icon-download-medium.png">Resume</a>
-               <a data-tab-target="#tab4" class="btn"><img class="btn-icon" src="/assets/icon-phone-medium.png">Contact</a>
+               <a data-tab-target="#tab3" class="btn"><img class="btn-icon" src="/assets/icon-phone-medium.png">Contact</a>
             </div>
             <div class="media-btns">
                <a href="https://www.upwork.com/freelancers/cstudio" target="_blank"><img class="media-btn" src="/assets/icon-upwork.png"></a>
@@ -56,14 +56,15 @@
          <div class="page-title">
             <h2>Projects</h2>
          </div>
+         <!--
+         <div class="project-control-box">
+            <a class="btn prev-btn"><img class="btn-icon" src="/assets/icon-prev-medium.png"></a>
+            <a class="btn next-btn"><img class="btn-icon" src="/assets/icon-next-medium.png"></a>
+         </div>
+         -->
          <div class="page-content">
 
-            <div class="project-controls">
-               <a class="btn p-btn p-btn-back"><img class="btn-icon" src="/assets/icon-prev-medium.png"></a>
-               <a class="btn p-btn p-btn-next"><img class="btn-icon" src="/assets/icon-next-medium.png"></a>
-            </div>
-
-            <div class="project project--active">
+            <div class="project-item">
                <h2>[1] cStudio</h2>
                <h3>HTML, CSS, JavaScript</h3>
                <div class="project-images">
@@ -78,7 +79,7 @@
                </div>
             </div>
 
-            <div class="project">
+            <div class="project-item">
                <h2>[2] Photo App</h2>
                <h3>HTML, CSS, JavaScript, API</h3>
                <div class="project-images">
@@ -93,7 +94,7 @@
                </div>
             </div>
 
-            <div class="project">
+            <div class="project-item">
                <h2>[3] Stock App</h2>
                <h3>HTML, CSS, JavaScript, API</h3>
                <div class="project-images">
@@ -108,7 +109,7 @@
                </div>
             </div>
 
-            <div class="project">
+            <div class="project-item">
                <h2>[4] Heli Hero</h2>
                <h3>HTML, CSS, JavaScript</h3>
                <div class="project-images">
@@ -131,51 +132,66 @@
       <div class="page page2 frosted">
          <div class="page-title">
             <h2>Education</h2>
+            <a class="edu-tab edu-tab--active"><h3>Online Courses</h3></a>
+            <a class="edu-tab"><h3>Reading</h3></a>
+            <a class="edu-tab"><h3>University</h3></a>
          </div>
          <div class="page-content">
-
-            <div class="education-item">
-               <h4>2021</h4>
-               <h3>Freemote Bootcamp</h3>
-               <h4>HTML, CSS, JavaScript, and Liquid</h4>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
+            <div id="edu1" class="edu edu--active">
+               <h2>Online Courses</h2>
+               <div class="education-item">
+                  <h4>2021</h4>
+                  <h3>Freemote Bootcamp</h3>
+                  <h4>HTML, CSS, JavaScript, and Liquid</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
+               </div>
+               <div class="education-item">
+                  <h4>2020</h4>
+                  <h3>Mimo Bootcamp</h3>
+                  <h4>HTML, CSS, and JavaScript</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>    
+               </div>
+               <div class="education-item">
+                  <h4>2016</h4>
+                  <h3>Social Secrets</h3>
+                  <h4>Facebook and Instagram Advertising</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
+               </div>
+               <div class="education-item">
+                  <h4>2014</h4>
+                  <h3>Amazing Selling Machine</h3>
+                  <h4>eCommerce and FBA</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
+               </div>
             </div>
-
-            <div class="education-item">
-               <h4>2020</h4>
-               <h3>Mimo Bootcamp</h3>
-               <h4>HTML, CSS, and JavaScript</h4>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>    
+            <div id="edu2" class="edu">
+               <h2>Reading</h2>
+               <div class="education-item">
+                  <h4>2021</h4>
+                  <h3>The Pragmatic Programmer</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
+               </div>
+               <div class="education-item">
+                  <h4>2021</h4>
+                  <h3>Algorithms</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
+               </div>
             </div>
-
-            <div class="education-item">
-               <h4>2016</h4>
-               <h3>Social Secrets</h3>
-               <h4>Facebook and Instagram Advertising</h4>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
+            <div id="edu3" class="edu">
+               <h2>University</h2>
+               <div class="education-item">
+                  <h4>2010-2012</h4>
+                  <h3>Architectural Engineering, Dipl T.</h3>
+                  <h4>British Columbia Institue of Technology</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
+               </div>
+               <div class="education-item">
+                  <h4>2008</h4>
+                  <h3>Carpentry & Framing, Cert.</h3>
+                  <h4>Vancouver Island University</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
+               </div>
             </div>
-
-            <div class="education-item">
-               <h4>2014</h4>
-               <h3>Amazing Selling Machine</h3>
-               <h4>eCommerce and FBA</h4>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
-            </div>
-
-            <div class="education-item">
-               <h4>2010-2012</h4>
-               <h3>Architectural Engineering, Dipl T.</h3>
-               <h4>British Columbia Institue of Technology</h4>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
-            </div>
-
-            <div class="education-item">
-               <h4>2008</h4>
-               <h3>Carpentry & Framing, Cert.</h3>
-               <h4>Vancouver Island University</h4>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis praesentium dolores beatae, sapiente, illo debitis aliquid adipisci cumque quia totam deserunt at voluptas facere iste vitae eius quibusdam esse.</p>
-            </div>
-
          </div>
       </div>
    </div>
@@ -186,18 +202,37 @@
             <h2>Contact</h2>
          </div>
          <div class="page-content">
-            <form class="contact-form shadow" action="mailto:curtis@cstudio.ca" >
-               <div class="contact-form--50-wide">
-                  <input type="text" id="name" name="name" placeholder="Name" required>
-                  <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <div class="flex">
+
+               <form class="contact-form shadow" action="mailto:curtis@cstudio.ca" >
+                  <h3>Online Form</h3>
+                  <div class="contact-form--50-wide">
+                     <input type="text" id="name" name="name" placeholder="Name" required>
+                     <input type="email" id="email" name="email" placeholder="Email" required>
+                  </div>
+                  <div class="contact-form--100-wide">
+                     <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                     <textarea rows="3" id="message" name="message" placeholder="Message" required></textarea>
+                  </div>
+                  <input type="submit" id="submit" class="btn" value="↪ Send">
+               </form>
+
+               <div class="contact-text">
+                  <h3>Let's chat?</h3>
+                  <p>Feel free to call, text, or email if you have any questions or would like to chat about a project.</p>
+                  <p>—————</p>
+                  <p>
+                     Curtis Hill<br>
+                     Victoria, British Columbia<br>
+                     +1 778-269-4747<br>
+                     curtis@cstudio.ca<br>
+                  </p>
+                  <img class="contact-image" src="/assets/contact-image.jpg">
                </div>
-               <div class="contact-form--100-wide">
-                  <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                  <input type="textarea" id="message" name="message" placeholder="Message" required>
-               </div>
-               <input type="submit" id="submit" class="btn" value="↪ Send">
-            </form>
-   
+
+            </div>
+         
          </div>
       </div>
    </div>

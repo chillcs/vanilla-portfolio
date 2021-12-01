@@ -69,6 +69,25 @@ input[type='reset'] {
 	margin: -20px;
 }
 
+.fade {
+	animation: fade 1s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.page,
+.project-item,
+.edu {
+	animation: fade 1s;
+}
+
 /* FONTS, SIZES, & COLORS --- */
 
 /* Color converter for .png images https://codepen.io/sosuke/pen/Pjoqqp */
@@ -131,6 +150,13 @@ h2 {
 h3 {
 	font-size: 1.5rem;
 	line-height: 2rem;
+	margin: 5px 0;
+}
+
+h4 {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 900;
 	margin: 5px 0;
 }
 
@@ -321,19 +347,8 @@ input[type='submit'] {
 
 /* TAB 1 (PROJECT) --- */
 
-.project-controls {
-	position: absolute;
-	top: 25px;
-	right: 15px;
-	display: flex;
-}
-
-.project {
-	display: none;
-}
-
-.project--active {
-	display: block;
+.project-item {
+	padding-bottom: 25px;
 }
 
 .project-images {
@@ -350,9 +365,26 @@ input[type='submit'] {
 
 .project-btns {
 	display: flex;
+	margin-bottom: 15px;
 }
 
 /* TAB 2 (EDUCATION) --- */
+.edu-tab {
+	color: var(--color2);
+}
+
+.edu-tab--active {
+	color: var(--color1);
+	animation: fade 1s;
+}
+
+.edu {
+	display: none;
+}
+
+.edu--active {
+	display: block;
+}
 
 .education-item {
 	padding: 5px 0;
@@ -362,11 +394,29 @@ input[type='submit'] {
 
 /* TAB 3 (CONTACT) --- */
 
+.flex {
+	display: flex;
+}
+
+.contact-text {
+	width: 50%;
+	padding-left: 25px;
+}
+
+.contact-text p {
+	padding-right: 40px;
+}
+
+.contact-image {
+	width: 100%;
+	border-radius: 15px;
+}
+
 .contact-form {
 	background-color: var(--color5);
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	width: 50%;
 	margin: 0 auto;
 	padding: 25px;
 }
@@ -391,12 +441,20 @@ input[type='submit'] {
 	font-family: var(--font);
 	font-size: 1rem;
 	width: 100%;
-	padding: 15px 5px;
-	margin: 25px 0px;
+	padding: 10px 5px;
+	margin: 15px 0px;
 }
 
 .contact-form #name {
 	margin-right: 15px;
+}
+
+.contact-form #message {
+	resize: vertical;
+}
+
+.contact-form #submit {
+	margin-top: 10px;
 }
 
 /* TAB 4 (PRIVACY POLICY) --- */

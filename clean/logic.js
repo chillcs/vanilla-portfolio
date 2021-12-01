@@ -1,15 +1,12 @@
 //
-// Define Variables ---
+//
+// Page Navigation ---
+//
 const tabs = document.querySelectorAll('[data-tab-target]');
 const tabContents = document.querySelectorAll('[data-tab-content]');
 const nav = document.querySelector('.nav');
-const navBtn = document.querySelector('.nav-btn');
 const footer = document.querySelector('.footer');
-const projects = document.querySelectorAll('.project');
-const backBtn = document.querySelector('.p-btn-back');
-const nextBtn = document.querySelector('.p-btn-next');
 //
-// Page Navigation ---
 tabs.forEach((tab) => {
 	tab.addEventListener('click', () => {
 		var target = document.querySelector(tab.dataset.tabTarget);
@@ -22,14 +19,25 @@ tabs.forEach((tab) => {
 	});
 });
 //
+//
 // Toggle Mobile Menu ---
+//
+const navBtn = document.querySelector('.nav-btn');
+//
 navBtn.addEventListener('click', () => {
 	nav.classList.toggle('nav--mobile');
 	footer.classList.toggle('footer--hide');
 });
 //
+//
 // Project Back/Next Buttons ---
+//
+/*
+const projects = document.querySelectorAll('.project');
+const backBtn = document.querySelector('.p-btn-back');
+const nextBtn = document.querySelector('.p-btn-next');
 var projectCount = 0;
+//
 backBtn.addEventListener('click', () => {
 	projectCount--;
 	if (projectCount >= 0) {
@@ -47,4 +55,30 @@ nextBtn.addEventListener('click', () => {
 	} else if (projectCount === projects.length) {
 		projectCount--;
 	}
+});
+*/
+//
+//
+// Education Tab Selector ---
+//
+var eduTabs = document.querySelectorAll('.edu-tab');
+var eduContents = document.querySelectorAll('.edu');
+var eduTabsFormatted = [];
+//
+eduTabs.forEach((eduTab) => {
+	eduTabsFormatted.push(eduTab.textContent.trim());
+	eduTab.addEventListener('click', () => {
+		// select and highlight active tab
+		for (let i = 0; i < eduTabs.length; i++) {
+			eduTabs[i].classList.remove('edu-tab--active');
+		}
+		eduTab.classList.add('edu-tab--active');
+		// create index position and store it in a variable
+		var eduIndex = eduTabsFormatted.indexOf(eduTab.textContent.trim());
+		// display content based on index position
+		eduContents.forEach((eduContent) => {
+			eduContent.classList.remove('edu--active');
+		});
+		eduContents[eduIndex].classList.add('edu--active');
+	});
 });
