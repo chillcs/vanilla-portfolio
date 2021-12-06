@@ -20,14 +20,6 @@ input[type='reset'] {
 	cursor: pointer;
 }
 
-[data-tab-content] {
-	display: none;
-}
-
-.tab--active[data-tab-content] {
-	display: block;
-}
-
 /* EFFECTS --- */
 
 .blink {
@@ -201,11 +193,8 @@ p {
 	margin: 5px;
 }
 
-.p-btn {
-	padding: 18px 15px 15px 20px;
-}
-
 input[type='submit'] {
+	font-size: 1rem;
 	width: 150px;
 	background-color: var(--color1);
 	color: var(--color5);
@@ -283,6 +272,14 @@ input[type='submit'] {
 	height: 100%;
 }
 
+[data-tab-content] {
+	display: none;
+}
+
+.tab--active[data-tab-content] {
+	display: block;
+}
+
 .tab {
 	width: 80%;
 	height: calc(100vh - 150px - 30px);
@@ -298,7 +295,7 @@ input[type='submit'] {
 .page-title {
 	width: calc(50% - 175px - 30px);
 	text-align: right;
-	padding: 25px;
+	padding: 25px 35px;
 }
 
 .page-nav {
@@ -307,7 +304,7 @@ input[type='submit'] {
 
 .page-content {
 	width: calc(100% - (50% - 175px - 30px));
-	padding: 25px;
+	padding: 25px 40px;
 	overflow-y: auto;
 	word-wrap: break-word;
 }
@@ -429,7 +426,6 @@ input[type='submit'] {
 }
 
 .contact-form #name,
-.contact-form #company,
 .contact-form #email,
 .contact-form #subject,
 .contact-form #message {
@@ -458,3 +454,138 @@ input[type='submit'] {
 /* TAB 4 (PRIVACY POLICY) --- */
 
 /* TAB 5 (SITE MAP) --- */
+
+/* MEDIA (LARGE SCREEN) --- */
+
+@media only screen and (min-width: 1750px) {
+	.header a,
+	.header button {
+		font-size: 1.75rem;
+	}
+
+	.blink {
+		font-size: 1.65rem;
+		padding-right: 8px;
+	}
+
+	h1 {
+		font-size: 4rem;
+		line-height: 5rem;
+		margin: 10px 0;
+	}
+
+	h2 {
+		font-size: 3rem;
+		line-height: 3.5rem;
+		margin: 10px 0;
+	}
+
+	h3 {
+		font-size: 2rem;
+		line-height: 2.5rem;
+		font-weight: 100;
+		margin: 10px 0;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+		line-height: 1.755rem;
+		font-weight: 900;
+		margin: 10px 0;
+	}
+
+	p {
+		font-size: 1.25rem;
+		line-height: 1.5rem;
+		margin: 15px 0;
+	}
+
+	.footer a {
+		font-size: 1.15rem;
+	}
+
+	.btn {
+		font-size: 1.25rem;
+		padding: 20px 35px;
+		padding-right: 50px;
+		margin-right: 10px;
+	}
+
+	.btn-icon {
+		width: 1.5rem;
+		padding-right: 5px;
+	}
+
+	.media-btn {
+		width: 55px;
+		height: 55px;
+		margin: 10px 5px;
+	}
+
+	input[type='submit'] {
+		font-size: 1.25rem;
+		width: 225px;
+	}
+
+	.header,
+	.footer {
+		height: 100px;
+	}
+
+	.bg-box {
+		height: calc(100vh - 200px);
+	}
+
+	.bg1 {
+		width: calc(50% - 250px - 30px);
+	}
+
+	.bg2 {
+		width: calc(100% - (50% - 250px - 30px));
+	}
+
+	.tab {
+		height: calc(100vh - 200px - 30px);
+		min-height: 500px;
+	}
+
+	.page-title {
+		width: calc(50% - 250px - 30px);
+		padding: 60px;
+	}
+
+	.page-content {
+		width: calc(100% - (50% - 250px - 30px));
+		padding: 60px;
+	}
+
+	.photo-me {
+		width: 500px;
+		padding: 25px;
+	}
+
+	.home p {
+		max-width: 500px;
+	}
+
+	.project-image {
+		width: 65%;
+	}
+
+	.contact-form #name,
+	.contact-form #email,
+	.contact-form #subject,
+	.contact-form #message {
+		font-size: 1.25rem;
+		padding: 15px 5px;
+		margin: 15px 0px;
+	}
+
+	.contact-form #name {
+		margin-right: 15px;
+	}
+
+	.contact-form #submit {
+		margin-top: 15px;
+	}
+}
