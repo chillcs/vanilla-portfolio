@@ -55,17 +55,16 @@
       <div class="page page1 frosted">
          <div class="page-title">
             <h2>Projects</h2>
+            <div class="page-nav">
+               <a class="pro-tab pro-tab--active"><h3>cStudio</h3></a>
+               <a class="pro-tab"><h3>JavaScript Game</h3></a>
+               <a class="pro-tab"><h3>Photo App</h3></a>
+               <a class="pro-tab"><h3>Stock App</h3></a>
+            </div>
          </div>
-         <!--
-         <div class="project-control-box">
-            <a class="btn prev-btn"><img class="btn-icon" src="/assets/icon-prev-medium.png"></a>
-            <a class="btn next-btn"><img class="btn-icon" src="/assets/icon-next-medium.png"></a>
-         </div>
-         -->
          <div class="page-content">
-
-            <div class="project-item">
-               <h2>[1] cStudio</h2>
+            <div id="pro1" class="pro pro--active">
+               <h2>cStudio</h2>
                <h3>HTML, CSS, JavaScript</h3>
                <div class="project-images">
                   <img class="project-image" src="/assets/project-template.jpg">
@@ -75,42 +74,10 @@
                <p>Like this website? I coded it from sratch using HTML, CSS, and JavaScript. I couldn't find a template that I liked so I decided to build one myself. It's mobile responsive, and since I built everything from the ground up and didn't use any libraries, it's super lightweight and fast.</p>
                <div class="project-btns">
                   <a class="btn" href="https://github.com/curtisStudio/cstudio" target="_blank"><img class="btn-icon" src="/assets/icon-code-medium.png">Source Code</a>
-                  <a class="btn" href="https://dev.cstudio.ca" target="_blank"><img class="btn-icon" src="/assets/icon-test-medium.png">Test it Live</a>
                </div>
             </div>
-
-            <div class="project-item">
-               <h2>[2] Photo App</h2>
-               <h3>HTML, CSS, JavaScript, API</h3>
-               <div class="project-images">
-                  <img class="project-image" src="/assets/project-template.jpg">
-                  <img class="project-image" src="/assets/project-template.jpg">
-                  <img class="project-image" src="/assets/project-template.jpg">
-               </div>
-               <p>I programmed a dynamic photo app using HTML, CSS, JavaScript, and an API from a stock photo site. When entering a search query into the app it scans the database and displays all of the relevant photos in a 3-tier stacking tile format.</p>
-               <div class="project-btns">
-                  <a class="btn" href="https://github.com/curtisStudio/photo-app" target="_blank"><img class="btn-icon" src="/assets/icon-code-medium.png">Source Code</a>
-                  <a class="btn" href="https://photo-app.cstudio.ca" target="_blank"><img class="btn-icon" src="/assets/icon-test-medium.png">Test it Live</a>
-               </div>
-            </div>
-
-            <div class="project-item">
-               <h2>[3] Stock App</h2>
-               <h3>HTML, CSS, JavaScript, API</h3>
-               <div class="project-images">
-                  <img class="project-image" src="/assets/project-template.jpg">
-                  <img class="project-image" src="/assets/project-template.jpg">
-                  <img class="project-image" src="/assets/project-template.jpg">
-               </div>
-               <p>Coming soon...</p>
-               <div class="project-btns">
-                  <a class="btn" href="https://github.com/curtisStudio/stock-app" target="_blank"><img class="btn-icon" src="/assets/icon-code-medium.png">Source Code</a>
-                  <a class="btn" href="https://stock-app.cstudio.ca" target="_blank"><img class="btn-icon" src="/assets/icon-test-medium.png">Test it Live</a>
-               </div>
-            </div>
-
-            <div class="project-item">
-               <h2>[4] Heli Hero</h2>
+            <div id="pro2" class="pro">
+               <h2>JavaScript Game</h2>
                <h3>HTML, CSS, JavaScript</h3>
                <div class="project-images">
                   <img class="project-image" src="/assets/project-template.jpg">
@@ -123,7 +90,34 @@
                   <a class="btn" href="https://heli-hero.cstudio.ca" target="_blank"><img class="btn-icon" src="/assets/icon-test-medium.png">Test it Live</a>
                </div>
             </div>
-
+            <div id="pro3" class="pro">
+               <h2>Photo App</h2>
+               <h3>HTML, CSS, JavaScript, API</h3>
+               <div class="project-images">
+                  <img class="project-image" src="/assets/project-template.jpg">
+                  <img class="project-image" src="/assets/project-template.jpg">
+                  <img class="project-image" src="/assets/project-template.jpg">
+               </div>
+               <p>I programmed a dynamic photo app using HTML, CSS, JavaScript, and an API from a stock photo site. When entering a search query into the app it scans the database and displays all of the relevant photos in a 3-tier stacking tile format.</p>
+               <div class="project-btns">
+                  <a class="btn" href="https://github.com/curtisStudio/photo-app" target="_blank"><img class="btn-icon" src="/assets/icon-code-medium.png">Source Code</a>
+                  <a class="btn" href="https://photo-app.cstudio.ca" target="_blank"><img class="btn-icon" src="/assets/icon-test-medium.png">Test it Live</a>
+               </div>
+            </div>
+            <div id="pro4" class="pro">
+               <h2>Stock App</h2>
+               <h3>HTML, CSS, JavaScript, API</h3>
+               <div class="project-images">
+                  <img class="project-image" src="/assets/project-template.jpg">
+                  <img class="project-image" src="/assets/project-template.jpg">
+                  <img class="project-image" src="/assets/project-template.jpg">
+               </div>
+               <p>Coming soon...</p>
+               <div class="project-btns">
+                  <a class="btn" href="https://github.com/curtisStudio/stock-app" target="_blank"><img class="btn-icon" src="/assets/icon-code-medium.png">Source Code</a>
+                  <a class="btn" href="https://stock-app.cstudio.ca" target="_blank"><img class="btn-icon" src="/assets/icon-test-medium.png">Test it Live</a>
+               </div>
+            </div>
          </div>
       </div>
    </div>
@@ -132,9 +126,11 @@
       <div class="page page2 frosted">
          <div class="page-title">
             <h2>Education</h2>
-            <a class="edu-tab edu-tab--active"><h3>Online Courses</h3></a>
-            <a class="edu-tab"><h3>Reading</h3></a>
-            <a class="edu-tab"><h3>University</h3></a>
+            <div class="page-nav">
+               <a class="edu-tab edu-tab--active"><h3>Online Courses</h3></a>
+               <a class="edu-tab"><h3>Reading</h3></a>
+               <a class="edu-tab"><h3>University</h3></a>
+            </div>
          </div>
          <div class="page-content">
             <div id="edu1" class="edu edu--active">
@@ -202,37 +198,18 @@
             <h2>Contact</h2>
          </div>
          <div class="page-content">
-
-            <div class="flex">
-
-               <form class="contact-form shadow" action="mailto:curtis@cstudio.ca" >
-                  <h3>Online Form</h3>
-                  <div class="contact-form--50-wide">
-                     <input type="text" id="name" name="name" placeholder="Name" required>
-                     <input type="email" id="email" name="email" placeholder="Email" required>
-                  </div>
-                  <div class="contact-form--100-wide">
-                     <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                     <textarea rows="3" id="message" name="message" placeholder="Message" required></textarea>
-                  </div>
-                  <input type="submit" id="submit" class="btn" value="↪ Send">
-               </form>
-
-               <div class="contact-text">
-                  <h3>Let's chat?</h3>
-                  <p>Feel free to call, text, or email if you have any questions or would like to chat about a project.</p>
-                  <p>—————</p>
-                  <p>
-                     Curtis Hill<br>
-                     Victoria, British Columbia<br>
-                     +1 778-269-4747<br>
-                     curtis@cstudio.ca<br>
-                  </p>
-                  <img class="contact-image" src="/assets/contact-image.jpg">
+            <form class="contact-form" action="mailto:curtis@cstudio.ca" >
+               <h2>Online Form</h2>
+               <div class="contact-form--50-wide">
+                  <input type="text" id="name" name="name" placeholder="Name" required>
+                  <input type="email" id="email" name="email" placeholder="Email" required>
                </div>
-
-            </div>
-         
+               <div class="contact-form--100-wide">
+                  <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                  <textarea rows="3" id="message" name="message" placeholder="Message" required></textarea>
+               </div>
+               <input type="submit" id="submit" class="btn" value="↪ Send">
+            </form>
          </div>
       </div>
    </div>
